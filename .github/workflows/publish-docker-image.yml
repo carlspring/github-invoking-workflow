@@ -3,10 +3,6 @@ name: Publish Docker image
 on:
   workflow_dispatch:
     inputs:
-      image_name:
-        description: 'Docker image name'
-        default: ${{ github.event.repository.name }}
-        type: string
       tag:
         description: 'Release tag version'
         required: true
@@ -33,6 +29,7 @@ jobs:
     uses: carlspring/github-reusable-workflow/.github/workflows/publish-docker-image.yml@master
 #    secrets: inherit
     with:
+      image_name: "${{ github.event.repository.name }}"
       tag: "${{ inputs.tag }}"
       tag_latest: "${{ inputs.tag_latest }}"
       tag_minimal: "${{ inputs.tag_minimal }}"
