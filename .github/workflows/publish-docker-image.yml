@@ -27,7 +27,7 @@ jobs:
   publish-docker-image:
     runs-on: ubuntu-linux
     uses: carlspring/github-reusable-workflow/.github/workflows/publish-docker-image.yml@master
-    secrets: inherit
+#    secrets: inherit
     with:
       tag: "${{ inputs.tag }}"
       tag_latest: "${{ inputs.tag_latest }}"
