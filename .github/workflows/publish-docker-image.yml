@@ -25,8 +25,8 @@ permissions:
 
 jobs:
   publish-docker-image:
-    runs-on: ubuntu-linux
-    uses: carlspring/github-reusable-workflow/.github/workflows/publish-docker-image.yml@f4bae5e
+    #runs-on: ubuntu-linux
+    uses: carlspring/github-reusable-workflow/.github/workflows/publish-docker-image.yml@main
 #    secrets: inherit
     with:
       image_name: "${{ github.event.repository.name }}"
