@@ -25,6 +25,7 @@ permissions:
 
 jobs:
   publish-docker-image:
+    runs-on: ubuntu-linux
     uses: carlspring/github-reusable-workflow/.github/workflows/publish-docker-image.yml@master
     secrets: inherit
     with:
